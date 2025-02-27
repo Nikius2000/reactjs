@@ -26,17 +26,17 @@ export default function Home() {
     router.push("/auth");
   };
 
-  const openModal = (imageSrc) => {
-    setSelectedImage(imageSrc);
-    setIsModalOpen(true);
-  };
+  const openModal = (imageSrc: string) => {
+    setSelectedImage(imageSrc);  
+    setIsModalOpen(true);      
+};
 
   const closeModal = () => {
     setIsModalOpen(false);
     setSelectedImage("");
   };
 
-  const handleModalCloseClick = (e) => {
+  const handleModalCloseClick = (e: React.MouseEvent<HTMLDivElement>) => {
     if (e.target === e.currentTarget) {
       closeModal();
     }
